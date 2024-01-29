@@ -179,7 +179,7 @@ function get($endpoint): array
     }
 
     # Fechamos a chamada que foi aberta e agora está concluída, para liberar recurso do servidor.
-    curl_close($ch);
+    unset($ch);
 
     $decoded = json_decode($response, true);
 
